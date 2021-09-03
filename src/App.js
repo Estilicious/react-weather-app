@@ -1,10 +1,12 @@
 import './App.css';
+import Weather from "./Weather";
 
 export default function App() {
   return (
     <div className="App">
       <div className="container">
-      Weather App
+      
+      <Weather />
       <footer>
         © <a href="https://esty.netlify.app" target="_blank" rel="noreferrer" >Esther Chukwu </a> 2021 and is{" "} 
       <a 
