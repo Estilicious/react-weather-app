@@ -1,7 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
+import axios from "axios";
 import "./Weather.css";
 
-export default function Weather(){
+    export default function Weather(){
+    const [ready, setReady]=useState(false);
+    const [weatherData, setWeatherData]=useState({});
+    
+
+function handleResponse(response){
+console.log(response.data);
+setWeatherData({
+    temperature:response.data.main.temp,
+wind:12,
+city:response.data.name,    
+});
+
+setReady(true);
+}
+if (ready){
     return(
         <div className="Weather">
             <form>
@@ -21,11 +37,11 @@ export default function Weather(){
             
             </div>
             </form>
-        <h1> Tokyo </h1>
+        <h1> {weatherData.city} </h1>
         <ul>
-        <li> Friday 23:14 
+        <li> Tuesday 23:14 
         </li>
-        <li> Mostly cloudy 
+        <li> {weatherData.description} 
         </li>
         </ul>
         <div className="row mt-3">
@@ -36,7 +52,7 @@ export default function Weather(){
                 classNmae="float-left" 
                 />
                 <div className="float-left">
-                 <span className="temperature">20 </span>
+                 <span className="temperature">{Math.round(weatherData.temperature)} </span>
                  <span className="unit">℃ </span>
                  </div>
    </div>
@@ -50,11 +66,23 @@ export default function Weather(){
                   Humidity 99%
               </li>
               <li>
-                  Wind 1m/s
+                  Wind: {weatherData.wind} 1m/s
               </li>
        </ul>
        </div>
         </div>
         </div>
-    )
+    );
+}
+
+else{
+    
+    const apiKey="a25893266955d940e8b2afef4aeaea90";
+    let city="Tokyo";
+    let apiUrl=`https://api.openweathermap.org/data/2.5/weather?q=${city}
+    &appid=${apiKey}&units=metric`; 
+    axios.get(apiUrl).then (handleResponse);
+
+    return "Loading...";
+}
 }
