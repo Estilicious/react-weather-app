@@ -8,9 +8,9 @@ export default function App() {
       
       <Weather defaultCity="Tokyo" />
       <footer>
-        © <a href="https://esty.netlify.app" target="_blank" rel="noreferrer" >Esther Chukwu </a> 2021 and is{" "} 
+        © <a href="https://esty.netlify.app" target="_blank" rel="noopener noreferrer" >Esther Chukwu </a> 2021 and is{" "} 
       <a 
-      href="https://github.com/Estilicious/react-weather-app" target="_blank" rel="noreferrer">
+      href="https://github.com/Estilicious/react-weather-app" target="_blank" rel="noopener noreferrer">
      open-sourced on github</a>
     </footer>
     </div>
