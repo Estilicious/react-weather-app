@@ -6,7 +6,7 @@ export default function App() {
     <div className="App">
       <div className="container">
       
-      <Weather defaultCity="Tokyo" />
+      <Weather defaultCity="Seattle" />
       <footer>
         © <a href="https://esty.netlify.app" target="_blank" rel="noopener noreferrer" >Esther Chukwu </a> 2021 and is{" "} 
       <a 

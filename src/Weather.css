@@ -1,6 +1,7 @@
 .Weather {
+  background: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
   font-family: "Google Sans", arial, sans-serif;
-  border: 1px solid #dadde1;
+  border: 1px solid #aab7c9;
   color: rgb (135, 135, 135);
   padding: 16px;
   display: block;
@@ -8,7 +9,10 @@
 }
 
 .Weather h1 {
+  color: #1458ca;
   font-size: 48px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
   font-weight: 400;
   margin: 20px 0 0 0;
   line-height: 29px;
